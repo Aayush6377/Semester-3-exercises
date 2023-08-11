@@ -22,18 +22,21 @@ void Part::printpart(){
     cout<<"Cost: "<<Cost<<endl;
 }
 int main(){
-    Part parts[5];
+    Part parts[3];
     
-    for (int i=0;i<5;i++){
+    for (int i=0;i<3;i++){
         int m,p;
         float c;
         cout<<"For Part "<<i+1<<endl;
         cout<<"Enter Model no., Part no., cost: ";
         cin>>m,p,c;
+        getchar();
         parts[i].setpart(m,p,c);
+        cout<<endl;
     }
     
-    for (int i=0; i<5; i++){
+    cout<<endl;
+    for (int i=0; i<3; i++){
         parts[i].printpart();
         cout<<endl;
     }
