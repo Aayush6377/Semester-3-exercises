@@ -27,7 +27,7 @@ int main(){
     p1.printpart();
     
     cout<<endl<<"Part 2"<<endl;
-    p1.setpart(5543,2133,430.56);
-    p1.printpart();
+    p2.setpart(5543,2133,430.56);
+    p2.printpart();
     return 0;
 }
