@@ -30,7 +30,6 @@ int main(){
         cout<<"For Part "<<i+1<<endl;
         cout<<"Enter Model no., Part no., cost: ";
         cin>>m,p,c;
-        getchar();
         parts[i].setpart(m,p,c);
         cout<<endl;
     }
