@@ -28,8 +28,12 @@ int main(){
         int m,p;
         float c;
         cout<<"For Part "<<i+1<<endl;
-        cout<<"Enter Model no., Part no., cost: ";
-        cin>>m,p,c;
+        cout<<"Enter Model no: ";
+        cin>>m;
+        cout<<"Enter Part no:";
+        cin>>p;
+        cout<<"Enter cost: ";
+        cin>>c;
         parts[i].setpart(m,p,c);
         cout<<endl;
     }
