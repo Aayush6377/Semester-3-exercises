@@ -28,7 +28,7 @@ class Employee{
 int Employee::i=1;
 int main(){
     Employee arr[5];
-    cout<<end;
+    cout<<endl;
     for (int i=0; i<5; i++){
         cout<<"Employee "<<i+1<<endl;;
         arr[i].display();
