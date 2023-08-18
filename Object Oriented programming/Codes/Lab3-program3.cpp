@@ -6,7 +6,6 @@ class Employee{
      string Name;
      float salary;
      string DOB;
-     string designation;
   public:
      static int i;
      Employee(){
@@ -17,23 +16,21 @@ class Employee{
          cin>>DOB;
          cout<<"Enter salary: ";
          cin>>salary;
-         cout<<"Enter Designation: ";
-         getline(cin,designation)
          i++;
      }
      void display(){
          cout<<"Name: "<<Name<<endl;
          cout<<"DOB: "<<DOB<<endl;
          cout<<"Salary: "<<salary<<endl;
-         cout<<"Designation: "<<designation<<endl;
      }
 };
 
 int Employee::i=1;
 int main(){
     Employee arr[5];
+    cout<<end;
     for (int i=0; i<5; i++){
-        cout<<"Employee "<<i+1;
+        cout<<"Employee "<<i+1<<endl;;
         arr[i].display();
         cout<<endl;
     }
