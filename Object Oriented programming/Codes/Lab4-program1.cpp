@@ -4,6 +4,8 @@
 using namespace std;
 
 int main(){
+ cout<<"Aayush Kukreja"<<endl;
+ cout<<"1/22/FET/BCS/159"<<endl<<endl;
  float a,b;
  char c;
  while(true){
