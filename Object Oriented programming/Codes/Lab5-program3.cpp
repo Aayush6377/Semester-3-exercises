@@ -2,17 +2,14 @@
 #include <iostream>
 using namespace std;
 
-inline void swapp(float &a,float &b){
-    float temp=a;
-    a=b;
-    b=a;
+inline void vol(float &a,float &b,float &c){
+    cout<<"Volume of cuboid: "<<a*b*c<<endl;
 }
 
 int main(){
-    float a=12.2;
-    float b=45.3;
-    cout<<"Before swapping: a="<<a<<", b="<<b<<endl;
-    swapp(a,b);
-    cout<<"After swapping: a="<<a<<", b="<<b<<endl;
+    float a,b,c;
+    cout<<"Enter dimensions: ";
+    cin>>a>>b>>c;
+    vol(a,b,c);
     return 0;
 }
