@@ -1,3 +1,4 @@
+//Write a program to convert infix expression to postfix expression
 #include <stdio.h>
 #include <string.h>
 #define Max 50
@@ -71,23 +72,27 @@ int main(){
             else if (sym==']' || sym=='}' || sym==')'){
                 while(peek()!='('){
                     postfix[u++]=pop();
+                    postfix[u++]=' ';
                 }
                 pop();
             }
             else if (precedence(sym)){
                 while (!isempty() && precedence(peek())>precedence(sym)){
                     postfix[u++]=pop();
+                    postfix[u++]=' ';
                 }
                 push(sym);
             }
             else{
                 postfix[u++]=sym;
+                postfix[u++]=' ';
             }
         }
     }
     
     while(!isempty()){
         postfix[u++]=pop();
+        postfix[u++]=' ';
     }
     postfix[u]='\0';
     
