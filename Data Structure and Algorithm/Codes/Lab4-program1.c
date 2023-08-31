@@ -85,6 +85,9 @@ int main(){
             }
             else{
                 postfix[u++]=sym;
+                while(str[i+1]>='0' && str[i+1]<='9'){
+                    postfix[u++]=str[++i];
+                }
                 postfix[u++]=' ';
             }
         }
