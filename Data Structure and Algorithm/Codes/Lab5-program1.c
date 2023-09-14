@@ -55,8 +55,8 @@ void print_queue(){
 
 int main(){
     printf("Operation:\n");
-    printf("1) Enqueue\n");
-    printf("2) Dequeue\n");
+    printf("1) Insert\n");
+    printf("2) Delete\n");
     printf("3) Print\n");
     printf("4) Quit\n");
     
