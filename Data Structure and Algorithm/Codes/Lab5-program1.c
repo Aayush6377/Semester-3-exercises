@@ -3,7 +3,7 @@ a) Create
 b) Insert
 c) Delete*/
 #include <stdio.h>
-#define Max 5
+#define Max 10
 
 //Create
 int Queue[Max];
@@ -59,12 +59,29 @@ int main(){
     printf("3) Print\n");
     printf("4) Quit\n");
     
-    task=0;
+    int task=0;
     while(task!=4){
         printf("Enter task: ");
         scanf("%d",&task);
         switch(task){
-            
+            case 1:
+               int d;
+               printf("Enter data: ");
+               scanf("%d",&d);
+               enqueue(d);
+               print_queue();
+               break;
+            case 2:
+               printf("Deleted element: %d\n",dequeue());
+               print_queue();
+               break;
+            case 3:
+               print_queue();
+               break;
+            case 4:
+               continue;
+            default:
+               printf("Wrong operation\n");
         }
     }
     return 0;
