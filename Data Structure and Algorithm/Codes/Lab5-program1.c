@@ -26,6 +26,7 @@ void enqueue(int data){
 int dequeue(){
     if (front==-1){
         printf("Queue underflow\n");
+        return -1;
     }
     else{
         int temp=Queue[front];
@@ -72,7 +73,9 @@ int main(){
                print_queue();
                break;
             case 2:
-               printf("Deleted element: %d\n",dequeue());
+               int a=dequeue();
+               if (a==-1) break;
+               printf("Deleted element: %d\n",a);
                print_queue();
                break;
             case 3:
