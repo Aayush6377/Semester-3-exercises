@@ -48,3 +48,36 @@ void print_stack(){
     }
     printf("\n");
 }
+
+int main(){
+    printf("Operations:\n");
+    printf(" 1) Push\n 2) Pop\n 3) Print\n 4)Quit\n");
+    int ask=0;
+    
+    while(ask!=4){
+        printf("Enter operation: ");
+        scanf("%d",&ask);
+        switch(ask){
+            case 1:
+               int data;
+               printf("Enter data: ");
+               scanf("%d",&ask);
+               push(data);
+               print_stack();
+               break;
+            case 2:
+               printf("Deleted element: %d\n",pop());
+               print_stack();
+               break;
+            case 3:
+               print_stack();
+               break;
+            case 4:
+               printf("Program terminated\n");
+               break;
+            default:
+              printf("Wrong operation!!!");
+        }
+    }
+    return 0;
+}
