@@ -38,7 +38,7 @@ int pop(){
 
 void print_stack(){
     if (isempty()){
-        printf("| _ |\n\n");
+        printf("| _ |\n");
         return;
     }
     struct node *p=top;
@@ -46,12 +46,12 @@ void print_stack(){
         printf("| %d |\n",p->data);
         p=p->next;
     }
-    printf("\n");
 }
 
 int main(){
+    
     printf("Operations:\n");
-    printf(" 1) Push\n 2) Pop\n 3) Print\n 4)Quit\n");
+    printf("1) Push\n2) Pop\n3) Print\n4) Quit\n");
     int ask=0;
     
     while(ask!=4){
@@ -61,7 +61,7 @@ int main(){
             case 1:
                int data;
                printf("Enter data: ");
-               scanf("%d",&ask);
+               scanf("%d",&data);
                push(data);
                print_stack();
                break;
