@@ -41,7 +41,7 @@ struct node* add(struct node *head, int b, int e){
 
 void print_poly(struct node* p){
     while(p!=NULL){
-        printf("%d^%d",p->base,p->exp);
+        printf("%dx^%d",p->base,p->exp);
         if (p->next!=NULL){
             printf(" + ");
         }
@@ -50,12 +50,16 @@ void print_poly(struct node* p){
 }
 int main(){
     struct node* head=NULL;
-    head=add(head,5,5);
-    head=add(head,9,3);
-    head=add(head,8,3);
-    head=add(head,8,2);
-    head=add(head,9,1);
-    head=add(head,56,7);
+    int n;
+    printf("Enter no. of terms: ");
+    scanf("%d",&n);
+    for (int i=0; i<n; i++){
+        int e,b;
+        printf("Enter %dth term base and power: ",i+1);
+        scanf("%d %d",&b,&e);
+        head=add(head,b,e);
+    }
+    printf("Polynomial: ");
     print_poly(head);
     return 0;
 }
