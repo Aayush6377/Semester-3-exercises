@@ -28,18 +28,22 @@ void postorder(struct node *p){
     printf("%d ",p->data);
 }
 
+struct node* create(int data){
+    struct node* temp=(struct node *)malloc(sizeof(struct node));
+    temp->data=data;
+    temp->left=NULL;
+    temp->right=NULL;
+    return temp;
+}
+
 struct node* insert(struct node *p,int data){
     if (p==NULL){
-        struct node* temp=(struct node *)malloc(sizeof(struct node));
-        temp->data=data;
-        temp->left=NULL;
-        temp->right=NULL;
-        return temp;
+        return create(data);
     }
-    if (p->data > data){
+    else if (p->data > data){
         p->left=insert(p->left,data);
     }
-    if (p->data < data){
+    else if (p->data < data){
         p->right=insert(p->right,data);
     }
     return p;
@@ -49,12 +53,15 @@ int main(){
     printf("Aayush Kukreja\n");
     printf("1/22/FET/BCS/159\n\n");
     
-    int a[10]={23,4,78,9,12,23,5,89,67,55};
+    int a[5]={23,45,56,3,12};
     struct node *root=NULL;
     
-    for (int i=0; i<10; i++){
+    for (int i=0; i<5; i++){
         root=insert(root,a[i]);
+        preorder(root);
+        printf("\n");
     }
+    printf("\nBST created!!!\n");
     printf("Preorder: ");
     preorder(root);
     printf("\n");
