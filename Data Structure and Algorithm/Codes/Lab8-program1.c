@@ -16,15 +16,15 @@ void preorder(struct node *p){
 
 void inorder(struct node *p){
     if (p==NULL) return;
-    preorder(p->left);
+    inorder(p->left);
     printf("%d ",p->data);
-    preorder(p->right);
+    inorder(p->right);
 }
 
 void postorder(struct node *p){
     if (p==NULL) return;
-    preorder(p->left);
-    preorder(p->right);
+    postorder(p->left);
+    postorder(p->right);
     printf("%d ",p->data);
 }
 
